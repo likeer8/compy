@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>JORYA公司首页</title>
+		<style>
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			
+			body {			
+				height: 1200px;
+				background: linear-gradient(#e3e0dd 35%, #403e3f 35%, #403e3f 100%) no-repeat;
+			}
+			/*页眉和导航栏开始*/
+			
+			.typepage {
+				margin: auto;
+				width: 980px;
+				position: relative;
+			}
+			
+			.top {
+				position: relative;
+			}
+			
+			.top img {
+				position: absolute;
+				left: 20px;
+				top: 23px;
+			}
+			
+			.top label {
+				/*width: 274px;
+				height: 28px;*/
+				background: white;
+			}
+			
+			.search_key {
+				width: 274px;
+				height: 28px;
+				border: none;
+				/*color: white;*/
+				position: absolute;
+				top: 43px;
+				right: 85px;
+				color: #5c5c5c;
+				font-family: "宋体";
+				font-size: 12px;
+				line-height: 28px;
+				text-indent: 10px;
+			}
+			
+			.submit {
+				width: 85px;
+				height: 28px;
+				border: none;
+				background: linear-gradient(#af2121 50%, #c43d3e 50%, #c43d3e 100%) no-repeat;
+				position: absolute;
+				color: white;
+				font-family: "宋体";
+				font-size: 12px;
+				top: 43px;
+				right: 0;
+			}
+			
+			.navigation {
+				width: 980px;
+				height: 58px;
+				background: linear-gradient(#f6f3ee, #e7e3e0) no-repeat;
+				position: absolute;
+				top: 105px;
+				left: 0;
+			}
+			
+			.navigation img {
+				position: absolute;
+				left: -3px;
+				top: 0;
+			}
+			
+			.navigation ol {
+				list-style: none;
+			}
+			
+			.a {
+				position: absolute;
+				left: 34px;
+			}
+			
+			.a li {
+				float: left;
+			}
+			
+			.a li a {
+				color: #464445;
+				font-size: 14px;
+				font-family: "宋体";
+				text-decoration: none;
+				line-height: 58px;
+				padding-right: 62px;
+				position: relative;
+				left: 0;
+			}
+			
+			.redline {
+				width: 116px;
+				height: 6px;
+				background: #ac2627;
+			}
+			/*下拉菜单开始*/
+			.pull-down{
+				width: 120px;
+				height: 374px;
+				background: #e3e0dd;
+				/*position: absolute;*/
+			}
+			.have-pulldown{
+				height: 0;
+			}
+			.shadow {
+				position: absolute;
+				z-index: 999;
+				top: 163px;
+				left: 65px;
+			}
+			/*页眉和导航栏结束*/
+			/*中间内容部分开始*/
+			
+			.center {
+				width: 980px;
+				height: 934px;
+				background: white;
+				position: absolute;
+				top: 163px;
+				left: 0;
+			}
+			
+			.banner {
+				width: 940px;
+				height: 448px;
+				position: absolute;
+				top: 37px;
+				left: 20px;
+			}
+			
+			.bannershadow {
+				position: absolute;
+				z-index: 999;
+				bottom: 427px;
+				left: 46px;
+			}
+			/*滚动图开始*/
+			
+			.rollpicture {
+				width: 698px;
+				height: 180px;
+				overflow: hidden;
+				position: absolute;
+				left: 20px;
+				top: 518px;
+			}
+			
+			.rollpicture img {
+				display: inline-block;
+				position: absolute;
+				left: -68px;
+			}
+			
+			.roll21 {
+				position: absolute;
+				top: 128px;
+				width: 60px;
+			}
+			
+			.roll3 {
+				position: absolute;
+				left: 174px;
+			}
+			
+			.roll4 {
+				position: absolute;
+				left: 348px;
+			}
+			
+			.roll5 {
+				position: absolute;
+				left: 522px;
+			}
+			
+			.roll6 {
+				position: absolute;
+				left: 696px;
+			}
+			
+			.rp1 {
+				color: #5C5C5C;
+				font-size: 12px;
+				text-align: center;
+				position: absolute;
+				left: -14px;
+				top: 9px;
+			}
+			/*产品系列开始*/
+			
+			.products {
+				width: 210px;
+				height: 416px;
+				background: #efece8;
+				position: absolute;
+				bottom: 0;
+				right: 20px;
+			}
+			
+			.product0 {
+				position: absolute;
+				top: 24px;
+				right: 0;
+			}
+			
+			.product1 {
+				clear: both;
+				position: absolute;
+				left: 15px;
+				top: 76px;
+			}
+			
+			.product2 {
+				position: absolute;
+				left: 15px;
+				top: 116px;
+			}
+			
+			.product3 {
+				position: absolute;
+				left: 15px;
+				top: 156px;
+			}
+			
+			.product4 {
+				position: absolute;
+				left: 15px;
+				top: 196px;
+			}
+			
+			.p1 {
+				width: 180px;
+				height: 30px;
+				text-align: center;
+				font-size: 12px;
+				font-family: "宋体";
+				line-height: 30px;
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+			
+			.p1 a {
+				text-decoration: none;
+				color: #5C5C5C;
+			}
+			
+			.add {
+				font-size: 12px;
+				font-family: "宋体";
+				color: #706f6f;
+				position: absolute;
+				bottom: 41px;
+				left: 24px;
+				line-height: 18px;
+			}
+			/*产品系列结束*/
+			/*公司简介开始*/
+			.company{
+				position: absolute;
+				left: 29px;
+				bottom: 191px;
+			}
+			.Cred{
+				width: 5px;
+				height: 14px;
+				background: #b92e2d;
+			}
+			.span{
+				position: absolute;
+				top: -5px;
+				left: 17px;
+				width: 256px;
+				font-size: 18px;
+				font-family: "微软雅黑";
+			}
+			.span1{
+				color: #747374;
+			}
+			.span2{
+				color: #c5c3c4;
+			}
+			.company a img{
+				position: absolute;
+				top: 5px;
+			}
+			.comtext{
+				width: 365px;
+				height: 104px;
+				font-size: 12px;
+				font-family: "宋体";
+				color: #706f6f;
+				position: absolute;
+				top: 54px;
+				line-height: 22px;
+				text-indent: 32px;
+				text-align: justify;
+			}
+			/*公司简介结束*/
+			/*新闻动态开始*/
+			.news{
+				position: absolute;
+				left: 430px;
+				bottom: 193px;
+			}
+			.Nspan{
+				position: absolute;
+				top: -5px;
+				left: 17px;
+				width: 256px;
+				font-size: 18px;
+				font-family: "微软雅黑";
+			}
+			.Nspan1{
+				color: #747374;
+			}
+			.Nspan2{
+				color: #c5c3c4;
+			}
+			.news a img{
+				position: absolute;
+				top: 5px;
+			}
+			.new-text{
+				width: 383px;
+				height: 104px;
+				font-size: 12px;
+				font-family: "宋体";
+				color: #706f6f;
+				position: absolute;
+				top: 54px;
+				text-indent: 32px;
+			}
+			.newtext-one{
+				position: absolute;
+				left: -14px;
+				top: 4px;
+				width: 300px;
+			}
+			.newtext-one span{
+				float: right;
+				/*position: absolute;
+				right: -88px;*/
+			}
+			.new-text img{
+				position: absolute;
+				left: 4px;
+				top: 8px;
+			}
+			.new-text1{
+				position: absolute;
+				top:77px;
+			}
+			.new-text2{
+				position: absolute;
+				top: 100px;
+			}
+			.new-tex3{
+				position: absolute;
+				top: 123px;
+			}
+			.new-text4{
+				position: absolute;
+				top: 146px;
+			}
+			/*新闻动态结束*/
+			/*末尾开始*/		
+			.bottom {
+				width: 980px;
+				height: 80px;
+				background: #545659;
+				position: absolute;
+				top: 1097px;
+				left: 0;
+				line-height: 80px;
+				color: #c0c0c0;
+				font-size: 12px;
+				font-family: "宋体";
+			}
+			
+			.bottom ul {
+				list-style: none;
+				position: absolute;
+				left: 28px;
+			}
+			
+			.bottom ul li {
+				float: left;
+				margin-right: 10px;
+			}
+			
+			.bottom ul li a {
+				color: #c0c0c0;
+				text-decoration: none;
+			}
+			
+			.bottom div {
+				position: absolute;
+				right: 41px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="typepage">
+
+			<div class="top">
+				<img src="img/logo.png" />
+				<input type="text" class="search_key" placeholder="请输入搜索关键词" />
+				<button class="submit">搜索</button>
+			</div>
+			<div class="navigation">
+
+				<div class="redline">
+
+				</div>
+				<img src="img/分割线.png" />
+				<ol class="a line">
+					<li>
+						<a href="#">网站首页</a>
+					</li>
+					<li>	
+						<a href="#">公司简介</a>
+						
+					</li>
+					<li>
+						<a href="#">新闻动态</a>
+					</li>
+					<li>
+						<a href="#">产品展示</a>
+					</li>
+					<li>
+						<a href="#">企业荣誉</a>
+					</li>
+					<li>
+						<a href="#">人才招聘</a>
+					</li>
+					<li>
+						<a href="#">联系我们</a>
+					</li>
+					<li>
+						<a href="#">请您留言</a>
+					</li>
+				</ol>
+				<!--<div class="pull-down">
+							
+					<ul>
+						<li>123</li>
+						<li>456</li>
+					</ul>
+				</div>-->
+			</div>
+			<img class="shadow" src="img/投影.png" />
+			<div class="center">
+				<div class="banner">
+					<img src="img/banner.png" />
+				</div>
+				<img class="bannershadow" src="img/投影.png" />
+				<div class="rollpicture">
+					<div class="roll2">
+						<a href="#">
+							<img src="img/滚动图1.png" />
+							<div class="roll21">
+								<img src="img/滚动图投影.png" />
+								<div class="rp1">一字肩蕾丝</div>
+							</div>	
+						</a>	
+					</div>
+					<div class="roll3">
+						<a href="#">
+							<img src="img/滚动图2.png" />
+							<div class="roll21">
+								<img src="img/滚动图投影.png" />
+								<div class="rp1">露肩连衣裙</div>
+							</div>	
+						</a>	
+					</div>
+					<div class="roll4">
+						<a href="#">
+							<img src="img/滚动图3.png" />
+							<div class="roll21">
+								<img src="img/滚动图投影.png" />
+								<div class="rp1">蕾丝袖罩衫</div>
+							</div>	
+						</a>	
+					</div>
+					<div class="roll5">
+						<a href="#">
+							<img src="img/滚动图4.png" />
+							<div class="roll21">
+								<img src="img/滚动图投影.png" />
+								<div class="rp1">帅气皮衣</div>
+							</div>	
+						</a>	
+					</div>
+					<div class="roll6">
+						<a href="#">
+							<img src="img/滚动图5.png" />
+							<div class="roll21">
+								<img src="img/滚动图投影.png" />
+								<div class="rp1">条纹连衣裙</div>
+							</div>	
+						</a>	
+					</div>
+				</div>
+				<div class="products">
+					<img class="product0" src="img/产品系列.png" />
+					<div class="product1">
+						<img src="img/产品系列背景.png" />
+						<div class="p1">
+							<a href="#">高级成衣系列</a>
+						</div>
+					</div>
+					<div class="product2">
+						<img src="img/产品系列背景.png" />
+						<div class="p1">
+							<a href="#">礼服定制系列</a>
+						</div>
+					</div>
+					<div class="product3">
+						<img src="img/产品系列背景.png" />
+						<div class="p1">
+							<a href="#">高级定制系列</a>
+						</div>
+					</div>
+					<div class="product4">
+						<img src="img/产品系列背景.png" />
+						<div class="p1">
+							<a href="#">高级成衣系列</a>
+						</div>
+					</div>
+					<div class="add">
+						地 址：杭州莫山南路868号<br/> 电 话：0571-98765432<br/> 传 真：0571-98765430<br/> 邮 箱：boss@mail.com<br/>
+					</div>
+				</div>
+				<div class="company">
+					
+					<div class="Cred"></div>
+					<span class="span span1">公司简介  </span>
+					<span class="span span2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						&nbsp;&nbsp;&nbsp;COMPANY PROFILE</span>
+					<a href="#"><img src="img/more》.png" /></a>
+					<div class="comtext">    JORYA了解女性对时尚的要求-利落的剪裁设计，
+						讲求精致的手工制作以及敏锐的反应流行趋势，引领追求时尚的都会女
+						性探索自我特质.JORYA所要塑造的是有教养、甜美而不失性感的都会女人.
+						而如何诠释女人细致、性感的特质呢？JORYA的想法是-我们使用缝合处的包光设计.手工缝制的珠片.....</div>
+				</div>
+				<div class="news">				
+					<div class="Cred"></div>
+					<span class="Nspan Nspan1">新闻动态</span>
+					<span class="Nspan Nspan2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						&nbsp;&nbsp;&nbsp;NEWS</span>
+					<a href="#"><img src="img/new-more.png" /></a>
+					<div class="new-text">
+						<img src="img/红三角.png" />
+						<div class="newtext-one">公司评选出2011年度十位优秀员工<span>01-17</span></div>
+					</div>
+					<div class="new-text new-text1">
+						<img src="img/红三角.png" />
+						<div class="newtext-one">公司评选出2011年度十位优秀员工<span>06-19</span></div>
+					</div>
+					<div class="new-text new-text2">
+						<img src="img/红三角.png" />
+						<div class="newtext-one">公司即将参加6月广州优秀服装展<span>06-19</span></div>
+					</div>
+					<div class="new-text new-tex3">
+						<img src="img/红三角.png" />
+						<div class="newtext-one">公司即将参加6月广州优秀服装展<span>06-19</span></div>
+					</div>
+					<div class="new-text new-text4">
+						<img src="img/红三角.png" />
+						<div class="newtext-one">公司即将参加6月广州优秀服装展<span>06-19</span></div>
+					</div>
+				</div>
+			</div>
+			<div class="bottom">
+				<ul>
+					<li>|</li>
+					<li>
+						<a href="#">公司介绍</a>
+					</li>
+					<li>|</li>
+					<li>
+						<a href="#">联系方式</a>
+					</li>
+					<li>|</li>
+					<li>
+						<a href="#">友情链接</a>
+					</li>
+					<li>|</li>
+					<li>
+						<a href="#">给我留言</a>
+					</li>
+					<li>|</li>
+					<li>
+						<a href="#">发展历程</a>
+					</li>
+					<li>|</li>
+				</ul>
+				<div>版权所有 Copyright(C)2009-2001 卓雅服装品牌设计公司</div>
+			</div>
+		</div>
+	</body>
+
+</html>

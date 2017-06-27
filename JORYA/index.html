@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			
+			body {
+				width: 100vw;
+				height: 1200px;
+				background: linear-gradient(#e3e0dd 35%, #403e3f 35%, #403e3f 100%) no-repeat;
+			}
+			/*页眉和导航栏开始*/
+			
+			.typepage {
+				margin: auto;
+				width: 980px;
+				position: relative;
+			}
+			
+			.top {
+				position: relative;
+			}
+			
+			.top img {
+				position: absolute;
+				left: 20px;
+				top: 23px;
+			}
+			
+			.top label {
+				/*width: 274px;
+				height: 28px;*/
+				background: white;
+			}
+			
+			.search_key {
+				width: 274px;
+				height: 28px;
+				border: none;
+				/*color: white;*/
+				position: absolute;
+				top: 43px;
+				right: 85px;
+				color: #5c5c5c;
+				font-family: "宋体";
+				font-size: 12px;
+				line-height: 28px;
+			}
+			
+			.submit {
+				width: 85px;
+				height: 28px;
+				border: none;
+				background: linear-gradient(#af2121 50%, #c43d3e 50%, #c43d3e 100%) no-repeat;
+				position: absolute;
+				color: white;
+				font-family: "宋体";
+				font-size: 12px;
+				top: 43px;
+				right: 0;
+			}
+			
+			.navigation {
+				width: 980px;
+				height: 58px;
+				background: linear-gradient(#f6f3ee, #e7e3e0) no-repeat;
+				position: absolute;
+				top: 105px;
+				left: 0;
+			}
+			
+			.navigation img {
+				position: absolute;
+				left: -3px;
+				top: 0;
+			}
+			
+			.navigation ol {
+				list-style: none;
+			}
+			
+			.a {
+				position: absolute;
+				left: 34px;
+			}
+			
+			.a li {
+				float: left;
+			}
+			
+			.a li a {
+				color: #464445;
+				font-size: 14px;
+				font-family: "宋体";
+				text-decoration: none;
+				line-height: 58px;
+				padding-right: 62px;
+				position: relative;
+				left: 0;
+			}
+			
+			.redline {
+				width: 116px;
+				height: 6px;
+				background: #ac2627;
+			}
+			
+			.shadow {
+				position: absolute;
+				z-index: 999;
+				top: 163px;
+				left: 65px;
+			}
+			/*页眉和导航栏结束*/
+			/*中间内容部分开始*/
+			
+			.center {
+				width: 980px;
+				height: 934px;
+				background: white;
+				position: absolute;
+				top: 163px;
+				left: 0;
+			}
+			
+			.banner {
+				width: 940px;
+				height: 448px;
+				position: absolute;
+				top: 37px;
+				left: 20px;
+			}
+			
+			.bannershadow {
+				position: absolute;
+				z-index: 999;
+				bottom: 427px;
+				left: 46px;
+			}
+			
+			/*产品系列开始*/
+			
+			.products {
+				width: 210px;
+				height: 416px;
+				background: #efece8;
+				position: absolute;
+				bottom: 0;
+				right: 20px;
+			}
+			
+			.product0 {
+				position: absolute;
+				top: 24px;
+				right: 0;
+			}
+			
+			.product1 {
+				clear: both;
+				position: absolute;
+				left: 15px;
+				top: 76px;
+			}
+			
+			.product2 {
+				position: absolute;
+				left: 15px;
+				top: 116px;
+			}
+			
+			.product3 {
+				position: absolute;
+				left: 15px;
+				top: 156px;
+			}
+			
+			.product4 {
+				position: absolute;
+				left: 15px;
+				top: 196px;
+			}
+			
+			.p1 {
+				width: 180px;
+				height: 30px;
+				text-align: center;
+				font-size: 12px;
+				font-family: "宋体";
+				line-height: 30px;
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+			
+			.p1 a {
+				text-decoration: none;
+				color: #5C5C5C;
+			}
+			
+			.add {
+				font-size: 12px;
+				font-family: "宋体";
+				color: #706f6f;
+				position: absolute;
+				bottom: 41px;
+				left: 24px;
+			}
+			/*产品系列结束*/
+			/*末尾开始*/
+			
+			.bottom {
+				width: 980px;
+				height: 80px;
+				background: #545659;
+				position: absolute;
+				top: 1097px;
+				left: 0;
+				line-height: 80px;
+				color: #c0c0c0;
+				font-size: 12px;
+				font-family: "宋体";
+			}
+			
+			.bottom ul {
+				list-style: none;
+				position: absolute;
+				left: 28px;
+			}
+			
+			.bottom ul li {
+				float: left;
+				margin-right: 10px;
+			}
+			
+			.bottom ul li a {
+				color: #c0c0c0;
+				text-decoration: none;
+			}
+			
+			.bottom div {
+				position: absolute;
+				right: 41px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="typepage">
+
+			<div class="top">
+				<img src="img/logo.png" />
+				<input type="text" class="search_key" placeholder="  请输入搜索关键词" />
+				<button class="submit">搜索</button>
+			</div>
+			<div class="navigation">
+
+				<div class="redline">
+
+				</div>
+				<img src="img/分割线.png" />
+				<ol class="a line">
+					<li>
+						<a href="#">网站首页</a>
+					</li>
+					<li>
+						<a href="#">公司简介</a>
+					</li>
+					<li>
+						<a href="#">新闻动态</a>
+					</li>
+					<li>
+						<a href="#">产品展示</a>
+					</li>
+					<li>
+						<a href="#">企业荣誉</a>
+					</li>
+					<li>
+						<a href="#">人才招聘</a>
+					</li>
+					<li>
+						<a href="#">联系我们</a>
+					</li>
+					<li>
+						<a href="#">请您留言</a>
+					</li>
+				</ol>
+			</div>
+			<img class="shadow" src="img/投影.png" />
+			<div class="center">
+				<div class="banner">
+					<img src="img/banner.png" />
+				</div>
+				<img class="bannershadow" src="img/投影.png" />
+				
+				<div class="products">
+					<img class="product0" src="img/产品系列.png" />
+					<div class="product1">
+						<img src="img/产品系列背景.png" />
+						<div class="p1">
+							<a href="#">高级成衣系列</a>
+						</div>
+					</div>
+					<div class="product2">
+						<img src="img/产品系列背景.png" />
+						<div class="p1">
+							<a href="#">礼服定制系列</a>
+						</div>
+					</div>
+					<div class="product3">
+						<img src="img/产品系列背景.png" />
+						<div class="p1">
+							<a href="#">高级定制系列</a>
+						</div>
+					</div>
+					<div class="product4">
+						<img src="img/产品系列背景.png" />
+						<div class="p1">
+							<a href="#">高级成衣系列</a>
+						</div>
+					</div>
+					<div class="add">
+						地 址：杭州莫山南路868号<br/> 电 话：0571-98765432<br/> 传 真：0571-98765430<br/> 邮 箱：boss@mail.com<br/>
+					</div>
+				</div>
+
+			</div>
+			<div class="bottom">
+				<ul>
+					<li>|</li>
+					<li>
+						<a href="#">公司介绍</a>
+					</li>
+					<li>|</li>
+					<li>
+						<a href="#">联系方式</a>
+					</li>
+					<li>|</li>
+					<li>
+						<a href="#">友情链接</a>
+					</li>
+					<li>|</li>
+					<li>
+						<a href="#">给我留言</a>
+					</li>
+					<li>|</li>
+					<li>
+						<a href="#">发展历程</a>
+					</li>
+					<li>|</li>
+				</ul>
+				<div>版权所有 Copyright(C)2009-2001 卓雅服装品牌设计公司</div>
+			</div>
+		</div>
+	</body>
+
+</html>
